@@ -14,11 +14,11 @@ public class Ejercicio9 {
 		int opcion = 0;
 		do {
 			System.out.println("-----------------------");
-			System.out.println("Nuevo Producto");
-			System.out.println("Mostrar todos los productos");
-			System.out.println("Incrementar precio a todos los productos");
-			System.out.println("Monto total de todos los productos");
-			System.out.println("Salir");
+			System.out.println("1-Nuevo Producto");
+			System.out.println("2-Mostrar todos los productos");
+			System.out.println("3-Incrementar precio a todos los productos");
+			System.out.println("4-Monto total de todos los productos");
+			System.out.println("5-Salir");
 			System.out.println("-----------------------");
 			
 			Scanner leer = new Scanner(System.in);
@@ -55,7 +55,7 @@ public class Ejercicio9 {
 		public static void ingresarProducto() {
 			Producto productoNuevo = new Producto();
 			Scanner leer1 = new Scanner(System.in);
-			System.out.println("Ingrese un nuevo producto: ");
+			/*System.out.println("Ingrese un nuevo producto: ");*/
 			productoNuevo.setNombre(leer1.nextLine());
 			
 			Scanner leer2 = new Scanner(System.in).useLocale(Locale.US);
