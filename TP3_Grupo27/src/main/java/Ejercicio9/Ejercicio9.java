@@ -55,7 +55,6 @@ public class Ejercicio9 {
 		public static void ingresarProducto() {
 			Producto productoNuevo = new Producto();
 			Scanner leer1 = new Scanner(System.in);
-			/*System.out.println("Ingrese un nuevo producto: ");*/
 			productoNuevo.setNombre(leer1.nextLine());
 			
 			Scanner leer2 = new Scanner(System.in).useLocale(Locale.US);
