@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Producto {
 	private String nombre, descripcion, marca;
 	private int codigo;
-	private ArrayList<Double> precio;
+	private Double precio;
 	
 	
 	
@@ -43,11 +43,11 @@ public class Producto {
 		this.codigo = codigo;
 	}
 
-	public ArrayList<Double> getPrecio() {
+	public Double getPrecio() {
 		return precio;
 	}
 
-	public void setPrecio(ArrayList<Double> precio) {
+	public void setPrecio(Double precio) {
 		this.precio = precio;
 	}
 
@@ -57,7 +57,7 @@ public class Producto {
 	
 	
 	
-	public Producto(String nombre, String descripcion, String marca, int codigo, ArrayList<Double> precio) {
+	public Producto(String nombre, String descripcion, String marca, int codigo, Double precio) {
 		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
@@ -66,23 +66,9 @@ public class Producto {
 		this.precio = precio;
 	}
 
-	/*public Double calcularPrecioProducto() {
-		Double precioProducto = 0.0;
-		//for (Double precios : precio) {
-			precioProducto = precio * 100.25;
-		//}
-		return precioProducto;
-	}*/
-	
-	/*public Double precioFianlProducto() {
-		double precioFinal = 0.0;
-		for (Double precios : precio) {
-			if(precio < precioFinal) {
-			precioFinal = precio;
-			}
-		}
-		return precioFinal;
-	}*/
+	public void incrementarPrecio() {
+		precio = precio + 100.25;
+	}
 	
 	@Override
 	public String toString() {

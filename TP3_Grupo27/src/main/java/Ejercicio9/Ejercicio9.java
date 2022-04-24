@@ -36,11 +36,11 @@ public class Ejercicio9 {
 			break;
 		case 3:
 			System.out.println("Incrementar precio de los productos: ");
-			
+			incrementarPrecio();
 			break;
 		case 4:
 			System.out.println("Monto total de todos los productos: ");
-			
+			montoTotalProducto();
 			break;
 		case 5:
 			System.out.println("Salir");
@@ -58,13 +58,11 @@ public class Ejercicio9 {
 			System.out.println("Ingrese un nuevo producto: ");
 			productoNuevo.setNombre(leer1.nextLine());
 			
-			ArrayList<Double> precioNuevo = new ArrayList<Double>();
-			for(int i = 0; i < 1; i++) {
-				Scanner leer2 = new Scanner(System.in).useLocale(Locale.US);
+			Scanner leer2 = new Scanner(System.in).useLocale(Locale.US);
 				System.out.println("Ingrese el precio del producto");
-				precioNuevo.add(leer2.nextDouble());
-			}
-			productoNuevo.setPrecio(precioNuevo);
+				
+			
+			productoNuevo.setPrecio(leer2.nextDouble());
 			agregarProducto(productoNuevo);
 		}
 
@@ -78,8 +76,23 @@ public class Ejercicio9 {
 			for(Producto a: listaProducto) {
 				System.out.println(a.toString());
 			}
-		}
-
+			
 		
+		}
+		
+		public static void incrementarPrecio() {
+			for(Producto a: listaProducto) {
+			a.incrementarPrecio();
+			}
+			mostrarProductos();
+		}
+		
+		public static void montoTotalProducto(){
+			double total = 0.0;
+			for(Producto producto: listaProducto) {
+				total = total + producto.getPrecio();
+			}
+			System.out.println("El monto total es: " + total);
+		}
 		
 }
